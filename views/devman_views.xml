@@ -91,7 +91,7 @@
                 <field name="model">dev.request.task</field>
                 <field name="arch" type="xml">
                 <!-- vacío por ahora, pero el Kanban irá aquí! -->
-                    <kanban default_group_by="kanban_state,devreq_id" default_order="date_deadline" quick_create="false">
+                    <kanban default_group_by="kanban_state" default_order="date_deadline" quick_create="false">
                         <templates>
                             <t t-name="kanban-box">
                             <div class="oe_kanban_card">
