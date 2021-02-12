@@ -7,11 +7,22 @@
                 res_model="dev.request"
                 view_mode="tree,form"
             />
-            <!-- Menu item to open Developments requests list -->
+             <!-- top level menu: no parent -->
+        <menuitem
+            id="main_menu_dev_man"
+            name="Developments Manager"
+        />
+        <!-- A first level in the left side menu is needed before using action= attribute -->
+        <menuitem
+            id="l1_menu_dev_man"
+            name="Developments Manager"
+            parent="main_menu_dev_man"
+        />
+                   <!-- Menu item to open Developments requests list -->
             <menuitem
                 id="menu_dev_manager"
                 name="Developments Manager"
-                parent="mail.mail_feeds"
+                parent="l1_menu_dev_man"
                 sequence="20"
                 action="action_dev_manager"
             />
@@ -26,8 +37,8 @@
             <menuitem
                 id="menu_dev_man_tasks"
                 name="Developments Manager Tasks"
-                parent="mail.mail_feeds"
-                sequence="20"
+                parent="l1_menu_dev_man"
+                sequence="30"
                 action="action_dev_man_tasks"
             />
             <record id="view_form_dev_req" model="ir.ui.view">
